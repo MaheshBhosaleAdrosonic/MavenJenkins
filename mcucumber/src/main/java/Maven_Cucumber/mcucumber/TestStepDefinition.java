@@ -2,6 +2,7 @@ package Maven_Cucumber.mcucumber;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,10 +14,13 @@ public class TestStepDefinition {
 
 	WebDriver driver;
 
+	Logger log;
 	public void initializeEnvirnoment() {
 		System.setProperty("webdriver.chrome.driver", "E:\\Mahesh\\Softwares\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
+		log = Logger.getLogger("Step Description of Cucumber :");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		log.info("Browser Opened Successfully....");
 		driver.manage().window().maximize();
 	}
 
@@ -29,11 +33,12 @@ public class TestStepDefinition {
 		WebElement hdrYourLogo = driver.findElement(By.xpath("//div[@id='header_logo']"));
 
 		if (hdrYourLogo.isDisplayed()) {
+			log.info("Click on Sign In");
 
 			driver.findElement(By.xpath("//a[normalize-space()='Sign in']")).click();
-
+			log.info("Eneter User Name ");
 			driver.findElement(By.xpath("//input[@id='email']")).sendKeys(username);
-
+			log.info("Eneter Pass Word");
 			driver.findElement(By.xpath("//input[@id='passwd']")).sendKeys(password);
 
 			driver.findElement(By.id("SubmitLogin")).click();
