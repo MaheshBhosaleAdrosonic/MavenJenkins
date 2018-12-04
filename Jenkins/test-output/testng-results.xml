@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29387" started-at="2018-12-04T11:27:30Z" finished-at="2018-12-04T11:27:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29387" started-at="2018-12-04T11:27:30Z" finished-at="2018-12-04T11:27:59Z">
+      <class name="MavenDemoJenkins.Jenkins.TestDemo">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:MavenDemoJenkins.Jenkins.TestDemo@224edc67]" name="beforeMethod" is-config="true" duration-ms="13720" started-at="2018-12-04T11:27:30Z" finished-at="2018-12-04T11:27:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:MavenDemoJenkins.Jenkins.TestDemo@224edc67]" name="main" duration-ms="14786" started-at="2018-12-04T11:27:44Z" finished-at="2018-12-04T11:27:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:MavenDemoJenkins.Jenkins.TestDemo@224edc67]" name="afterMethod" is-config="true" duration-ms="824" started-at="2018-12-04T11:27:59Z" finished-at="2018-12-04T11:27:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- MavenDemoJenkins.Jenkins.TestDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
