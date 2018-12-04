@@ -55,13 +55,13 @@ public class TestDemo {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		System.out.println("Open the browser....");
 		driver.get("http://automationpractice.com/index.php");
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-
 		driver.quit();
-
+		System.out.println("Close the browser....");
 	}
 }
