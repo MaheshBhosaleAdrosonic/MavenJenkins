@@ -12,3 +12,9 @@ Scenario:
 Given product Is Displayed
 When product Add Into Cart as "Printed Dress"
 Then Check Product Added Into Cart
+
+
+Scenario: GOToProgressNote
+Given Progress Note Page Display
+When Treatement Page Open
+Then Check Lab Added

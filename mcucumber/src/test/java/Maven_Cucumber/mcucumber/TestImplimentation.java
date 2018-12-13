@@ -38,27 +38,41 @@ public class TestImplimentation {
 	@Then("^Check home page is displayed$")
 	public void check_home_page_is_displayed() throws Throwable {
 		objTestStepDefinition.verifyHomePageIsDisplayed();
-		objTestStepDefinition.tearDownEnvirnoment();
+	//	objTestStepDefinition.tearDownEnvirnoment();
 		System.out.println("Close browser...");
 	}
 
+	@Given("^product Is Displayed$")
+	public void product_Is_Displayed() throws Throwable {
+		System.out.println("Product Is Displayed ");
+	}
+
+	@When("^product Add Into Cart as \"([^\"]*)\"$")
+	public void product_Add_Into_Cart_as(String element) throws Throwable {
+		System.out.println("Product Add To cart");
+		objTestStepDefinition.productAddIntoCartInApplication(element);
+	}
+
+	@Then("^Check Product Added Into Cart$")
+	public void check_Product_Added_Into_Cart() throws Throwable {
+		System.out.println("View Product is Added to the Cart");
+		objTestStepDefinition.viewTheCart();
+		objTestStepDefinition.tearDownEnvirnoment();
+	}
 	
-//	@Given("^product Is Displayed$")
-//	public void product_Is_Displayed() throws Throwable {
-//		System.out.println("Product Is Displayed ");
-//	}
-//
-//	@When("^product Add Into Cart as \"([^\"]*)\"$")
-//	public void product_Add_Into_Cart_as(String element) throws Throwable {
-//		System.out.println("Product Add To cart");
-//		objTestStepDefinition.productAddIntoCartInApplication(element);
-//	}
-//
-//	@Then("^Check Product Added Into Cart$")
-//	public void check_Product_Added_Into_Cart() throws Throwable {
-//		System.out.println("View Product is Added to the Cart");
-//		objTestStepDefinition.viewTheCart();
-//		objTestStepDefinition.tearDownEnvirnoment();
-//	}
+	@Given("^Progress Note Page Display$")
+	public void progress_Note_Page_Display() throws Throwable {
+	   System.out.println("Progress Note Page Display");
+	}
+
+	@When("^Treatement Page Open$")
+	public void treatement_Page_Open() throws Throwable {
+		 System.out.println("Treatement Page Open");
+	}
+	
+	@Then("^Check Lab Added$")
+	public void check_Lab_Added() throws Throwable {
+		 System.out.println("Check Lab Added");
+	}
 
 }
